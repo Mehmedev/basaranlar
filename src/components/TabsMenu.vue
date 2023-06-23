@@ -6,9 +6,8 @@
     <el-tab-pane label="Toplam İndirim" name="Toplam İndirim"><GrandTotal /></el-tab-pane>
   </el-tabs>
 </template>
-<script lang="ts" setup>
+<script setup>
 import { ref } from 'vue'
-import type { TabsPaneContext } from 'element-plus'
 
 import CustemerInfo from './CustomerInfo.vue'
 import GrandTotal from './GrandTotal.vue'
@@ -17,7 +16,7 @@ import SelectCustomer from './SelectCustomer.vue'
 
 const activeName = ref('first')
 
-const handleClick = (tab: TabsPaneContext, event: Event) => {
+const handleClick = (tab, event) => {
   console.log(tab, event)
 }
 </script>
